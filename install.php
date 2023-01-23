@@ -68,7 +68,7 @@ moodle_require_minimum_php_version();
 // make sure iconv is available and actually works
 if (!function_exists('iconv')) {
     // this should not happen, this must be very borked install
-    echo 'Moodle requires the iconv PHP extension. Please install or enable the iconv extension.';
+    echo 'Aram Services LMS requires the iconv PHP extension. Please install or enable the iconv extension.';
     die();
 }
 
@@ -188,7 +188,7 @@ $memlimit = @ini_get('memory_limit');
 if (!empty($memlimit) and $memlimit != -1) {
     if (get_real_size($memlimit) < get_real_size($minrequiredmemory)) {
         // do NOT localise - lang strings would not work here and we CAN not move it to later place
-        echo "Moodle requires at least {$minrequiredmemory}B of PHP memory.<br />";
+        echo "Aram Services LMS requires at least {$minrequiredmemory}B of PHP memory.<br />";
         echo "Please contact server administrator to fix PHP.ini memory settings.";
         die;
     }
